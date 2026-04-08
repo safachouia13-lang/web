@@ -1,11 +1,14 @@
 <?php
-
+$course = $_POST["course"];
 $credits = $_POST["credits"];
-$grades = $_POST["grade"];
+$grade = $_POST["grade"];
+
+echo "Course: " . $course . "<br>";
+echo "Credits: " . $credits . "<br>";
+echo "Grade: " . $grade;
 
 $totalPoints = 0;
 $totalCredits = 0;
-
 for ($i = 0; $i < count($credits); $i++) {
     $totalPoints += $credits[$i] * $grades[$i];
     $totalCredits += $credits[$i];
@@ -24,5 +27,7 @@ if ($gpa >= 3.7) {
 } else {
     echo "Fail";
 }
-
+echo "<br><br>";
+echo "<a href='index.html'><button>Calculate Again</button></a>";
 ?>
+
