@@ -1,11 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 <?php
 $course = $_POST["course"];
 $credits = $_POST["credits"];
-$grade = $_POST["grade"];
-
-echo "Course: " . $course . "<br>";
-echo "Credits: " . $credits . "<br>";
-echo "Grade: " . $grade;
+$grades = $_POST["grade"];
 
 $totalPoints = 0;
 $totalCredits = 0;
@@ -30,4 +33,5 @@ if ($gpa >= 3.7) {
 echo "<br><br>";
 echo "<a href='index.html'><button>Calculate Again</button></a>";
 ?>
-
+</body>
+</html>
